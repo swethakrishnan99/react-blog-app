@@ -1,6 +1,5 @@
 {
-  "homepage": "http://swethakrishnan99.github.io/react-blog-app",
-  "name": "react-blog-app",
+    "name": "react-blog-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
