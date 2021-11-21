@@ -14,13 +14,13 @@ class NavBar extends Component {
   };
   render() {
     const navLink = [
-      { label: "Home", to: "/react-blog-app/home" },
-      { label: "Bollywood", to: "/react-blog-app/bollywood" },
-      { label: "Technology", to: "/react-blog-app/technology" },
-      { label: "Hollywood", to: "/react-blog-app/hollywood" },
-      { label: "Fitness", to: "/react-blog-app/fitness" },
-      { label: "Food", to: "/react-blog-app/food" },
-      { label: "Login", to: "/react-blog-app/get-start" },
+      { label: "Home", to: "/home" },
+      { label: "Bollywood", to: "/bollywood" },
+      { label: "Technology", to: "/technology" },
+      { label: "Hollywood", to: "/hollywood" },
+      { label: "Fitness", to: "/fitness" },
+      { label: "Food", to: "/food" },
+      { label: "Login", to: "/get-start" },
     ];
     return (
       <div className="fixed">

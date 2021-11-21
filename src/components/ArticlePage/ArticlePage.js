@@ -25,8 +25,12 @@ class ArticlePage extends Component {
       match: {
         params: { id },
       },
+      history: { push },
     } = this.props;
     const news = this.props.getNews(id);
+    if (news === undefined) {
+      push("/not-found");
+    }
     return (
       <div>
         <Header />

@@ -17,23 +17,21 @@ export default class Main extends Component {
     return (
       <>
         <Switch>
-          <Route path="/react-blog-app/get-start" exact>
+          <Route path="/get-start" exact>
             <GetStarted toggleNav={this.props.toggleNav} />
           </Route>
-          <Route path="/react-blog-app/home" component={HomePage} exact />
-          <Route
-            path="/react-blog-app/:category"
-            component={CategoryPage}
-            exact
-          />
-          <Route path="/react-blog-app/home/:id" exact>
-            <ArticlePage toggleNav={this.props.toggleNav} getNews={getNews} />
-          </Route>
-
+          <Route path="/home" component={HomePage} exact />
           <Route path="/not-found">
             <NotFound toggleNav={this.props.toggleNav} />
           </Route>
-          <Redirect from="/react-blog-app/" to="/react-blog-app/home" exact />
+          <Route path="/:category" component={CategoryPage} exact />
+          <Route path="/home/:id" exact>
+            <ArticlePage toggleNav={this.props.toggleNav} getNews={getNews} />
+          </Route>
+
+          <Redirect from="/" to="/home" exact />
+          <Redirect from="/react-blog-app" to="/home" exact />
+          <Redirect from="/" to="/home" exact />
           <Redirect to="/not-found" />
         </Switch>
       </>

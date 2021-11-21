@@ -2,22 +2,30 @@ import React, { useContext, useState } from "react";
 import ArticleBox1 from "../../common/ArticleBox1/ArticleBox1";
 import Title from "../../common/Title/Title";
 import NewsProvider from "../../common/News";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import ArticleBox2 from "../../common/ArticleBox2/ArticleBox2";
 import AddBox from "../../common/AddBox";
 import "./CategoryPage.css";
+import NotFound from "../NotFound/NotFound";
 
 export default function Category() {
   const newsArray = useContext(NewsProvider);
   const [ending, setEnding] = useState(5);
   const { category } = useParams();
+
+  const { push } = useHistory();
   const loadMore = () => {
     if (ending >= categoryNews.length) return;
     setEnding((prevState) => prevState + 5);
   };
   const categoryNews = newsArray.filter((news) => news.category === category);
+  console.log(categoryNews.length);
+  if (categoryNews.length === 0) {
+    push("/not-found");
+  }
+
   return (
     <div className="flex-row page2">
       <div className="flex-column column1">
