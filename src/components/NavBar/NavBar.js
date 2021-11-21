@@ -13,7 +13,6 @@ class NavBar extends Component {
     this.setState((prevState) => ({ menuClicked: !prevState.menuClicked }));
   };
   render() {
-    console.log(this.state.menuClicked);
     const navLink = [
       { label: "Home", to: "/home" },
       { label: "Bollywood", to: "/bollywood" },
