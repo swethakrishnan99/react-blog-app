@@ -1,0 +1,235 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 2px solid rgb(241, 240, 240);
+  box-shadow: 3px 3px 10px grey;
+  padding: 15px 100px;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.header .large {
+  font-size: 50px;
+}
+.header .small {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.title {
+  font-size: 40px;
+  margin: 20px 0;
+  overflow-wrap: break-word;
+  font-family: "Times New Roman", Times, serif;
+}
+.page1 {
+  padding: 150px 25vw 20px 25vw;
+  align-items: center;
+}
+.profile {
+  width: 100px;
+  height: 100px;
+}
+.icon {
+  font-size: 35px;
+  margin: 3px;
+  color: rgb(175, 175, 175);
+}
+.profile-name {
+  font-size: 22px;
+  margin: 20px 10px;
+}
+.subtitle {
+  font-size: 15px;
+  color: grey;
+  margin: 0 10px;
+}
+.space-between {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.image {
+  width: 100%;
+}
+.content {
+  width: 100%;
+  font-size: 23px;
+  font-weight: lighter;
+  line-height: 40px;
+}
+.image {
+  height: 500px;
+  margin: 30px;
+}
+.tags {
+  width: 100%;
+  margin-top: 50px;
+}
+.tags > span {
+  background-color: rgba(212, 212, 212, 0.459);
+  color: grey;
+  margin: 10px;
+  padding: 5px 10px;
+}
+.float-left {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.border {
+  border-top: 2px solid rgb(241, 240, 240);
+  border-bottom: 2px solid rgb(241, 240, 240);
+  justify-content: start;
+  width: 100%;
+  padding: 20px 0;
+}
+.margin {
+  margin: 5px;
+}
+.center-fix {
+  top: 50vh;
+  left: 10vw;
+  width: 50px;
+  /* background-color: transparent; */
+  border: none;
+  z-index: -1;
+}
+.clicked {
+  color: goldenrod;
+}
+.article {
+  width: 20vw;
+  justify-content: space-evenly;
+}
+.more-article {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 15%;
+  z-index: 1;
+  background-color: rgb(245, 245, 245);
+}
+.more-article > div {
+  justify-content: space-between;
+  border-top: 3px solid rgba(233, 230, 230, 0.747);
+  border-bottom: 3px solid rgba(233, 230, 230, 0.747);
+  padding: 20px 0;
+}
+.more-article-img {
+  width: 100%;
+  height: 250px;
+}
+.more-article-title {
+  font-size: 22px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.profile-article {
+  width: 70px;
+  height: 70px;
+}
+.profile-article-article {
+  font-size: 18px;
+}
+.flex-start {
+  justify-content: start;
+}
+.flex-row2 {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column1 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 720px) {
+  .page1 {
+    padding: 100px 10px 0 10px;
+    align-items: center;
+  }
+  .title {
+    font-size: 25px;
+    margin: 10px;
+    overflow-wrap: break-word;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .flex-row2 {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .icon {
+    font-size: 25px;
+    padding: 10px 0;
+  }
+  .profile {
+    width: 80px;
+    height: 80px;
+  }
+  .profile-name {
+    font-size: 18px;
+    margin: 10px 10px;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: grey;
+    margin: 0 10px;
+  }
+  .image {
+    width: 90vw;
+    height: 90vw;
+  }
+  .content {
+    width: 90vw;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .tags {
+    margin-top: 20px;
+  }
+  .article {
+    width: 90vw;
+    justify-content: space-evenly;
+  }
+  .more-article-img {
+    width: 120px;
+    height: 120px;
+    margin: 5px 0;
+  }
+  .profile-article {
+    display: none;
+  }
+  .more-article-title {
+    font-size: 18px;
+    margin: 0;
+  }
+  .flex-column1 {
+    flex-direction: row-reverse;
+  }
+  .more-article .subtitle {
+    display: none;
+    margin-top: 5px;
+  }
+  .profile-name-article {
+    color: grey;
+    font-size: 15px;
+  }
+  .center-fix {
+    display: none;
+  }
+  .header {
+    padding: 0;
+    padding: 5px 10px;
+  }
+  .header .large {
+    font-size: 35px;
+  }
+  .header .small {
+    font-size: 15px;
+    margin-right: 5px;
+  }
+}

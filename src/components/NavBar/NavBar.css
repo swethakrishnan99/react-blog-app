@@ -1,0 +1,91 @@
+.navigation-bar {
+  list-style-type: none;
+  font-size: 18px;
+  margin: 10px;
+}
+.navigation-bar a {
+  color: black;
+  text-decoration: none;
+}
+.navigation-bar .active {
+  border-bottom: 3px solid red;
+  padding: 5px 15px;
+}
+
+.main-heading {
+  display: block;
+  text-align: center;
+  /* background-color: greenyellow; */
+  margin: 0px;
+}
+#header .large {
+  font-size: 80px;
+}
+#header.small {
+  font-size: 30px;
+  margin-right: 5px;
+}
+.main-heading > .small {
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+}
+#header > button {
+  display: none;
+}
+.signup {
+  background-color: white;
+  height: 40px;
+  color: green;
+  border: 2px solid green;
+  padding: 8px 15px;
+}
+
+.fixed {
+  position: fixed;
+  width: 100vw;
+  border-bottom: 2px solid rgb(241, 240, 240);
+  background-color: white;
+}
+@media only screen and (max-width: 720px) {
+  .navigation-bar a {
+    display: block;
+    width: 100vw;
+    padding: 10px;
+    border-bottom: 1px solid rgba(218, 216, 216, 0.493);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .navigation-bar .active {
+    padding: 0;
+  }
+  #header .large {
+    font-size: 40px;
+  }
+  #header .small {
+    font-size: 15px;
+    margin-right: 5px;
+  }
+  #header .main-heading {
+    display: block;
+    text-align: left;
+    margin: 0px;
+  }
+  #header > button {
+    border: none;
+    background-color: white;
+    display: block;
+  }
+  #header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100vw;
+  }
+  .navigation-bar {
+    margin: 0;
+  }
+  ul {
+    padding-inline-start: 0px;
+  }
+}

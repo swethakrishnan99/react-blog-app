@@ -1,0 +1,21 @@
+.column1 {
+  width: 45vw;
+}
+.page2 {
+  padding: 180px 15vw 20px 15vw;
+}
+
+@media only screen and (max-width: 720px) {
+  .flex-row {
+    flex-direction: column;
+  }
+  .column1 {
+    width: 80vw;
+    align-items: center;
+  }
+  .page2 {
+    padding: 100px 0 0 0;
+    margin: auto;
+    align-items: center;
+  }
+}
