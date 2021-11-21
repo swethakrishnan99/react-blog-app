@@ -17,11 +17,6 @@ class GetStarted extends Component {
     this.setState((prevState) => ({
       signIn: !prevState.signIn,
     }));
-  goToHome = (e) => {
-    e.preventDefault();
-    this.props.history.push("/");
-    console.log(this.props.history);
-  };
   render() {
     return (
       <div className="get-started-page flex-row">
@@ -46,9 +41,15 @@ class GetStarted extends Component {
             <SiteLogo />
           </div>
           {this.state.signIn ? (
-            <SignIn goHome={this.goToHome} appState={this.props.appState} />
+            <SignIn
+              input={this.props.onChange}
+              onSubmit={this.props.onSubmit}
+            />
           ) : (
-            <SignUp goHome={this.goToHome} appState={this.props.appState} />
+            <SignUp
+              input={this.props.onChange}
+              onSubmit={this.props.onSubmit}
+            />
           )}
         </div>
       </div>

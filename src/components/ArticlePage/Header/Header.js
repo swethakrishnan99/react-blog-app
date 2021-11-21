@@ -7,10 +7,9 @@ import SiteLogo from "../../../common/SiteLogo";
 
 export default class Header extends Component {
   state = { clicked: false };
-  // const likeArticle = () => {
-  //   console.log(this.state.clicked);
-  //   this.setState((prevState) => ({ clicked: !prevState.clicked }));
-  // };
+  likeArticle = () => {
+    this.setState((prevState) => ({ clicked: !prevState.clicked }));
+  };
 
   render() {
     return (
@@ -20,8 +19,8 @@ export default class Header extends Component {
           <GetStartBtn />
         </div>
         <div className="flex-column fixed center-fix">
-          {/* onClick={likeArticle}> */}
           <FontAwesomeIcon
+            onClick={this.likeArticle}
             icon={faThumbsUp}
             className={this.state.clicked ? "icon clicked" : "icon"}
           />

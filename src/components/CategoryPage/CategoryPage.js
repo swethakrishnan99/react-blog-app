@@ -33,11 +33,15 @@ export default function Category() {
         {categoryNews.slice(0, ending).map((news, index) => (
           <ArticleBox1 news={news} key={index} />
         ))}
-        <FontAwesomeIcon
-          icon={faArrowDown}
-          onClick={loadMore}
-          className="btn-load-more load-more"
-        />
+        {ending < categoryNews.length ? (
+          <FontAwesomeIcon
+            icon={faArrowDown}
+            onClick={loadMore}
+            className="btn-load-more load-more"
+          />
+        ) : (
+          <span className="subtitle">End</span>
+        )}
       </div>
       <div className="flex-column">
         <Title title={"Top Posts"} />

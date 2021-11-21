@@ -6,13 +6,14 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./NavBar.css";
 
 class NavBar extends Component {
-  state = { menuClicked: true };
+  state = { menuClicked: window.innerWidth > 720 };
 
   handleMenuBar = () => {
     if (window.innerWidth > 720) return;
     this.setState((prevState) => ({ menuClicked: !prevState.menuClicked }));
   };
   render() {
+    const login = this.props.login ? "LogOut" : "LogIn";
     const navLink = [
       { label: "Home", to: "/home" },
       { label: "Bollywood", to: "/bollywood" },
@@ -20,7 +21,7 @@ class NavBar extends Component {
       { label: "Hollywood", to: "/hollywood" },
       { label: "Fitness", to: "/fitness" },
       { label: "Food", to: "/food" },
-      { label: "Login", to: "/get-start" },
+      { label: [login], to: "/get-start" },
     ];
     return (
       <div className="fixed">

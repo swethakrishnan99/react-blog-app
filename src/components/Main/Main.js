@@ -8,6 +8,7 @@ import CategoryPage from "../CategoryPage/CategoryPage";
 import NewsProvider from "../../common/News";
 export default class Main extends Component {
   static contextType = NewsProvider;
+
   render() {
     const newsArray = this.context;
     const getNews = (id) => {
@@ -18,7 +19,11 @@ export default class Main extends Component {
       <>
         <Switch>
           <Route path="/get-start" exact>
-            <GetStarted toggleNav={this.props.toggleNav} />
+            <GetStarted
+              toggleNav={this.props.toggleNav}
+              onChange={this.props.onChange}
+              onSubmit={this.props.onSubmit}
+            />
           </Route>
           <Route path="/home" component={HomePage} exact />
           <Route path="/not-found">

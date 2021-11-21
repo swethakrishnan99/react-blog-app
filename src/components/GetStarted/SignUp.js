@@ -5,17 +5,16 @@ import { faUnlockAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function SignUp(props) {
-  const updateInput = () => {};
   return (
-    <form className="inner-container">
+    <form className="inner-container" onSubmit={props.onSubmit}>
       <FontAwesomeIcon icon={faUserCircle} className="get-started-icon" />
       <input
-        name="userName"
+        name="username"
         type="text"
         id="userName"
         className="get-started-input"
         placeholder="Name"
-        onChange={updateInput}
+        onChange={props.input}
         required
       />
       <FontAwesomeIcon icon={faEnvelopeSquare} className="get-started-icon" />
@@ -25,7 +24,7 @@ export default function SignUp(props) {
         id="email"
         className="get-started-input"
         placeholder="email"
-        onChange={updateInput}
+        onChange={props.input}
         required
       />
       <FontAwesomeIcon icon={faUnlockAlt} className="get-started-icon" />
@@ -35,7 +34,7 @@ export default function SignUp(props) {
         id="password"
         className="get-started-input"
         placeholder="Password"
-        onChange={updateInput}
+        onChange={props.input}
         required
       />
       <button

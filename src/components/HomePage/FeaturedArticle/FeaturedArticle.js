@@ -12,9 +12,9 @@ export default function FeaturedArticle() {
     push(url);
   };
   const [image1, setImage1] = useState({
-    backgroundImage: `url(${news[2].image})`,
+    backgroundImage: `url(${news[0].image})`,
   });
-  const defaultImg = { backgroundImage: `url(${news[2].image})` };
+  const defaultImg = { backgroundImage: `url(${news[0].image})` };
   const image2 = { backgroundImage: `url(${news[9].image})` };
   const image3 = { backgroundImage: `url(${news[20].image})` };
   const active = { colour: "rgb(255, 255, 255)" };

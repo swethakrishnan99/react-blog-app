@@ -93,9 +93,9 @@
   top: 50vh;
   left: 10vw;
   width: 50px;
-  /* background-color: transparent; */
+  background-color: transparent;
   border: none;
-  z-index: -1;
+  z-index: 1;
 }
 .clicked {
   color: goldenrod;
@@ -108,7 +108,6 @@
   width: 100%;
   box-sizing: border-box;
   padding: 30px 15%;
-  z-index: 1;
   background-color: rgb(245, 245, 245);
 }
 .more-article > div {
