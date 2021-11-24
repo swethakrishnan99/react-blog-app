@@ -93,8 +93,9 @@
   top: 50vh;
   left: 10vw;
   width: 50px;
-  background-color: transparent;
+  position: fixed;
   border: none;
+  background-color: transparent;
   z-index: 1;
 }
 .clicked {

@@ -55,7 +55,7 @@ class ArticlePage extends Component {
           <p className="content">{news.content}</p>
           <Footer />
         </div>
-        <MoreArticle category={news.category} Profile={Profile} />
+        <MoreArticle currentNews={news} Profile={Profile} />
       </div>
     );
   }

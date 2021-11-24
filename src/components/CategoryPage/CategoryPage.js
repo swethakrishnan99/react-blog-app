@@ -12,8 +12,8 @@ import NotFound from "../NotFound/NotFound";
 
 export default function Category() {
   const newsArray = useContext(NewsProvider);
-  const [ending, setEnding] = useState(5);
   const { category } = useParams();
+  const [ending, setEnding] = useState(5);
 
   const { push } = useHistory();
   const loadMore = () => {
@@ -21,7 +21,6 @@ export default function Category() {
     setEnding((prevState) => prevState + 5);
   };
   const categoryNews = newsArray.filter((news) => news.category === category);
-  console.log(categoryNews.length);
   if (categoryNews.length === 0) {
     push("/not-found");
   }

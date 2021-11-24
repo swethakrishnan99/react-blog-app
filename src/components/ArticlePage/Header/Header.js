@@ -18,7 +18,7 @@ export default class Header extends Component {
           <SiteLogo />
           <GetStartBtn />
         </div>
-        <div className="flex-column fixed center-fix">
+        <div className="flex-column center-fix">
           <FontAwesomeIcon
             onClick={this.likeArticle}
             icon={faThumbsUp}

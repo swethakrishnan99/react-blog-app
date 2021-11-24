@@ -9,8 +9,11 @@ class NavBar extends Component {
   state = { menuClicked: window.innerWidth > 720 };
 
   handleMenuBar = () => {
-    if (window.innerWidth > 720) return;
-    this.setState((prevState) => ({ menuClicked: !prevState.menuClicked }));
+    if (window.innerWidth > 720) {
+      window.scrollTo(0, 0);
+      return;
+      this.setState((prevState) => ({ menuClicked: !prevState.menuClicked }));
+    }
   };
   render() {
     const login = this.props.login ? "LogOut" : "LogIn";

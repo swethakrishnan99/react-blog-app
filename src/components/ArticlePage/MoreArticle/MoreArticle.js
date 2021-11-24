@@ -2,15 +2,22 @@ import React from "react";
 import NewsProvider from "../../../common/News";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function MoreArticle(props) {
-  const { category, id } = props;
+  const {
+    currentNews: { category, id },
+  } = props;
   const { push } = useHistory();
   const handleClick = (id) => {
     push(`/home/${id}`);
+    window.scrollTo(0, 0);
   };
   const newsArray = useContext(NewsProvider);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="more-article">
       <p>More From The Siren</p>
