@@ -17,7 +17,6 @@ class NavBar extends Component {
   };
 
   render() {
-    console.log(this.state.menuClicked);
     const login = this.props.login ? "LogOut" : "LogIn";
     const navLink = [
       { label: "Home", to: "/home" },
