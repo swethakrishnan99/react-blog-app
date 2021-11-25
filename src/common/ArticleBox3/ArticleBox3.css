@@ -28,9 +28,6 @@
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.latest-stories {
-  width: 100%;
-}
 .middle-border {
   border-left: 1px solid rgb(199, 197, 197);
   border-right: 1px solid rgb(199, 197, 197);
@@ -38,7 +35,6 @@
 .top-bottom-border {
   border-top: 1px solid rgb(199, 197, 197);
   border-bottom: 1px solid rgb(199, 197, 197);
-  width: 100%;
   justify-content: start;
 }
 @media only screen and (max-width: 720px) {
