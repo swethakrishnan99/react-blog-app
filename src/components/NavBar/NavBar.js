@@ -9,13 +9,15 @@ class NavBar extends Component {
   state = { menuClicked: window.innerWidth > 720 };
 
   handleMenuBar = () => {
-    if (window.innerWidth > 720) {
-      window.scrollTo(0, 0);
-      return;
-      this.setState((prevState) => ({ menuClicked: !prevState.menuClicked }));
-    }
+    window.scrollTo(0, 0);
+    if (window.innerWidth < 720)
+      return this.setState((prevState) => ({
+        menuClicked: !prevState.menuClicked,
+      }));
   };
+
   render() {
+    console.log(this.state.menuClicked);
     const login = this.props.login ? "LogOut" : "LogIn";
     const navLink = [
       { label: "Home", to: "/home" },
